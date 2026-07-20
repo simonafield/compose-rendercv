@@ -32,6 +32,8 @@ In the following examples, the `UID` and `GID` values are stored in an `.env` fi
 
 **Description:** Installs Python packages from [`requirements.txt`](./requirements.txt) into the [rendercv-fonts](#rendercv-fonts) volume for use with Typst-based RenderCV builds.
 
+The `pip-installer` service can be started with [fonts.sh](./fonts.sh).
+
 **Example:**
 ```bash
 docker compose \
@@ -50,6 +52,8 @@ docker compose \
 The local directory is mounted in `/data`.
 
 The [typst-fonts](#typst-fonts) volume is mounted in `/mnt/typst-fonts`.
+
+The `alpine-volume` service can be started with [volume.sh](./volume.sh).
 
 **Example:**
 ```bash
