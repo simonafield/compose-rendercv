@@ -22,13 +22,13 @@ In the following examples, the `UID` and `GID` values are stored in an `.env` fi
 
 ## Services
 
-### [`rendercv-base`](/compose-rendercv/docker-compose.yml#L4)
+### [`rendercv-base`](./compose-rendercv/docker-compose.yml#L4)
 
 **Description:** A base class defining the core [RenderCV](https://github.com/rendercv/rendercv) image (`ghcr.io/rendercv/rendercv:v2.8`). This service isn't intended to be invoked directly, but rather extended and reused by other services (inheritance).
 
 ---
 
-### [`pip-installer`](/compose-rendercv/docker-compose.yml#L9)
+### [`pip-installer`](./compose-rendercv/docker-compose.yml#L9)
 
 **Description:** Installs Python packages from [`requirements.txt`](./requirements.txt) into the [rendercv-fonts](#rendercv-fonts) volume for use with Typst-based RenderCV builds.
 
@@ -45,7 +45,7 @@ docker compose \
 
 ---
 
-### [`alpine-volume`](./docker-compose.yml#L19)
+### [`alpine-volume`](./compose-rendercv/docker-compose.yml#L19)
 
 **Description:** An interactive Alpine container mounting both the local project directory and the persistent Typst volumes.
 
@@ -65,7 +65,7 @@ docker-compose \
 
 ## Volumes
 
-### [typst-fonts](/compose-rendercv/docker-compose.yml#L32)
+### [typst-fonts](./compose-rendercv/docker-compose.yml#L32)
 
 **Description:** Persistent storage for Python packages installed for Typst font support.
 
