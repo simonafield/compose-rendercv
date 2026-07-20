@@ -68,3 +68,5 @@ docker-compose \
 ### [typst-fonts](/compose-rendercv/docker-compose.yml#L32)
 
 **Description:** Persistent storage for Python packages installed for Typst font support.
+
+Access this volume by running the [alpine-volume](#alpine-volume) service.
