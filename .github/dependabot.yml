@@ -10,6 +10,16 @@ updates:
       prefix: "dependabot"
       include: "scope"
 
+  - package-ecosystem: "pip"
+    directory: "/compose-typst"
+    schedule:
+      interval: "cron"
+      cronjob: "0 0 * * *"
+    target-branch: "main"
+    commit-message:
+      prefix: "dependabot"
+      include: "scope"
+
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:
