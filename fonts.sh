@@ -8,7 +8,7 @@ echo "GID=$(id -g)" >> .env
 
 docker compose \
     --env-file .env \
-    -f compose-typst/docker-compose.yml \
-    -f compose-typst/docker-compose-util.yml \
+    -f compose-rendercv/docker-compose.yml \
+    -f compose-rendercv/docker-compose-util.yml \
     run --rm \
     pip-installer

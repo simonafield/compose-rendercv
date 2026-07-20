@@ -1,1 +1,1 @@
-compose-typst/requirements.txt
+compose-rendercv/requirements.txt
