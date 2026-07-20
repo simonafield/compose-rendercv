@@ -12,12 +12,10 @@ services:
     user: "0:0"
     volumes:
       - .:/data
-      - rendercv-fonts:/fonts
+      - typst-fonts:/fonts
     working_dir: /
     command: sh -c "pip install --upgrade --no-cache-dir --root-user-action ignore -r /data/compose-rendercv/requirements.txt --target /fonts"
 
 volumes:
-  rendercv-fonts:
-    name: "rendercv-fonts"
-    labels:
-      description: "Volume to store fonts for RenderCV"
+  typst-fonts:
+    name: "typst-fonts"
