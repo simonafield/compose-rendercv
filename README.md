@@ -30,7 +30,7 @@ In the following examples, the `UID` and `GID` values are stored in an `.env` fi
 
 ### [`pip-installer`](./docker-compose.yml#L9)
 
-**Description:** Installs Python packages from [`requirements.txt`](./requirements.txt) into the [typst-fonts](#typst-fonts) volume for use with Typst-based RenderCV builds.
+**Description:** Installs Python packages from [`requirements.txt`](./requirements.txt) into the [rendercv-fonts](#rendercv-fonts) volume for use with Typst-based RenderCV builds.
 
 **Example:**
 ```bash
@@ -43,6 +43,6 @@ docker-compose \
 
 ## Volumes
 
-### [typst-fonts](./docker-compose.yml#L13)
+### [rendercv-fonts](./docker-compose.yml#L20)
 
-**Description:** Persistent storage for Python packages installed for Typst font support.
+**Description:** Persistent storage for Python packages installed for RenderCV font support.

@@ -1,17 +1,1 @@
-name: compose
-
-services:
-  rendercv-base:
-    container_name: rendercv-base
-    image: ghcr.io/rendercv/rendercv:v2.8
-    user: "${UID}:${GID}"
-
-  pip-installer:
-    container_name: pip-installer
-    image: python:3.14-alpine
-    user: "0:0"
-    volumes:
-      - .:/data
-      - typst-fonts:/fonts
-    working_dir: /
-    command: sh -c "pip install --upgrade --no-cache-dir --root-user-action ignore -r /data/requirements.txt --target /fonts"
+compose-typst/docker-compose.yml
