@@ -34,15 +34,34 @@ In the following examples, the `UID` and `GID` values are stored in an `.env` fi
 
 **Example:**
 ```bash
+docker compose \
+    --env-file .env \
+    -f compose-rendercv/docker-compose.yml \
+    run --rm \
+    pip-installer
+```
+
+---
+
+### [`alpine-volume`](./docker-compose.yml#L19)
+
+**Description:** An interactive Alpine container mounting both the local project directory and the persistent Typst volumes.
+
+The local directory is mounted in `/data`.
+
+The [typst-fonts](#typst-fonts) volume is mounted in `/mnt/typst-fonts`.
+
+**Example:**
+```bash
 docker-compose \
 	--env-file .env \
 	-f compose-rendercv/docker-compose.yml \
 	run --rm \
-	pip-installer
+	alpine-volume
 ```
 
 ## Volumes
 
-### [typst-fonts](/compose-rendercv/docker-compose.yml#L20)
+### [typst-fonts](/compose-rendercv/docker-compose.yml#L32)
 
 **Description:** Persistent storage for Python packages installed for Typst font support.

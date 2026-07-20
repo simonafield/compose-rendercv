@@ -16,6 +16,18 @@ services:
     working_dir: /
     command: sh -c "pip install --upgrade --no-cache-dir --root-user-action ignore -r /data/compose-rendercv/requirements.txt --target /fonts"
 
+  alpine-volume:
+    extends:
+      file: compose-rendercv/docker-compose-util.yml
+      service: alpine
+    container_name: alpine-volume
+    stdin_open: true
+    tty: true
+    command: sh
+    working_dir: /mnt
+    volumes:
+      - typst-fonts:/mnt/typst-fonts:ro
+
 volumes:
   typst-fonts:
     name: "typst-fonts"
