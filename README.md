@@ -56,11 +56,11 @@ The `alpine-volume` service can be started with [volume.sh](./volume.sh).
 
 **Example:**
 ```bash
-docker-compose \
-	--env-file .env \
-	-f compose-rendercv/docker-compose.yml \
-	run --rm \
-	alpine-volume
+docker compose \
+    --env-file .env \
+    -f compose-rendercv/docker-compose.yml \
+    run --rm \
+    alpine-volume
 ```
 
 ## Volumes

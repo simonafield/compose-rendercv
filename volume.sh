@@ -7,7 +7,7 @@ echo "UID=$(id -u)" > .env
 echo "GID=$(id -g)" >> .env
 
 docker compose \
-    -f docker-compose.yml \
+    --env-file .env \
     -f compose-rendercv/docker-compose.yml \
     run --rm \
     alpine-volume
