@@ -14,7 +14,7 @@ services:
       - .:/data
       - rendercv-fonts:/fonts
     working_dir: /
-    command: sh -c "pip install --upgrade --no-cache-dir --root-user-action ignore -r /data/requirements.txt --target /fonts"
+    command: sh -c "pip install --upgrade --no-cache-dir --root-user-action ignore -r /data/compose-rendercv/requirements.txt --target /fonts"
 
 volumes:
   rendercv-fonts:
