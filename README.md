@@ -49,9 +49,8 @@ docker compose \
 
 **Description:** An interactive Alpine container mounting both the local project directory and the persistent Typst volumes.
 
-The local directory is mounted in `/data`.
-
-The [typst-fonts](#typst-fonts) volume is mounted in `/mnt/typst-fonts`.
+- The local directory is mounted in `/data`.
+- The [typst-fonts](#typst-fonts) volume is mounted in `/mnt/typst-fonts`.
 
 The `alpine-volume` service can be started with [volume.sh](./volume.sh).
 
