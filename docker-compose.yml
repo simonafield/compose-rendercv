@@ -5,29 +5,3 @@ services:
     container_name: rendercv-base
     image: ghcr.io/rendercv/rendercv:v2.8
     user: "${UID}:${GID}"
-
-  pip-installer:
-    container_name: pip-installer
-    image: python:3.14-alpine
-    user: "0:0"
-    volumes:
-      - .:/data
-      - typst-fonts:/fonts
-    working_dir: /
-    command: sh -c "pip install --upgrade --no-cache-dir --root-user-action ignore -r /data/compose-rendercv/requirements.txt --target /fonts"
-
-  alpine-volume:
-    extends:
-      file: compose-rendercv/docker-compose-util.yml
-      service: alpine
-    container_name: alpine-volume
-    stdin_open: true
-    tty: true
-    command: sh
-    working_dir: /mnt
-    volumes:
-      - typst-fonts:/mnt/typst-fonts:ro
-
-volumes:
-  typst-fonts:
-    name: "typst-fonts"
